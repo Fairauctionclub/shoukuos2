@@ -16,6 +16,12 @@ public interface Utils {
 
   
 
+  static byte[] clone(byte[] value) {
+    byte[] clone = new byte[value.length];
+    System.arraycopy(value, 0, clone, 0, value.length);
+    return clone;
+  }
+
   static String align(String s, char fillChar, int targetLen, boolean alignRight) {
     if (targetLen <= s.length()) {
       return s;
