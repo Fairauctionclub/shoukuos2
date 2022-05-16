@@ -13,7 +13,17 @@ public interface Utils {
   static SecureRandom getRandom() {
     return random;
   }
+  
+  static byte[] getBytes(char[] chars) {
+    Charset cs = Charset.forName("UTF-8");
+    CharBuffer cb = CharBuffer.allocate(chars.length);
+    cb.put(chars);
+    cb.flip();
+    ByteBuffer bb = cs.encode(cb);
 
+    return bb.array();
+  }
+  
   static String getIdShort(String Id) {
     return Id == null ? "<null>" : Id.substring(0, 8);
   }
