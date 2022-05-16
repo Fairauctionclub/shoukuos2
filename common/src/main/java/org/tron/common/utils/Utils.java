@@ -14,7 +14,9 @@ public interface Utils {
     return random;
   }
 
-  
+  static String getIdShort(String Id) {
+    return Id == null ? "<null>" : Id.substring(0, 8);
+  }
 
   static byte[] clone(byte[] value) {
     byte[] clone = new byte[value.length];
