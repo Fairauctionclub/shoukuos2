@@ -38,10 +38,14 @@ public class StringUtil {
   }
 
   public static String createReadableString(ByteString string) {
+    
     return createReadableString(string.toByteArray());
+    
   }
 
   public static ByteString hexString2ByteString(String hexString) {
+    
     return ByteString.copyFrom(ByteArray.fromHexString(hexString));
+    
   }
 }
