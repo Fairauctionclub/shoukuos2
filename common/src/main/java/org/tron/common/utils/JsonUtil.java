@@ -8,13 +8,16 @@ public class JsonUtil {
   public static final <T> T json2Obj(String jsonString, Class<T> clazz) {
     if (!StringUtils.isEmpty(jsonString) && clazz != null) {
       try {
+        
         ObjectMapper om = new ObjectMapper();
         return om.readValue(jsonString, clazz);
       } catch (Exception var3) {
         throw new RuntimeException(var3);
       }
     } else {
+      
       return null;
+      
     }
   }
 
@@ -24,6 +27,7 @@ public class JsonUtil {
     } else {
       ObjectMapper om = new ObjectMapper();
       try {
+        
         return om.writeValueAsString(obj);
       } catch (Exception var3) {
         throw new RuntimeException(var3);
