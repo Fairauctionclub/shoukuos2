@@ -222,7 +222,15 @@ public class ByteUtil {
     }
     return new BigInteger(1, b).longValueExact();
   }
-
+  
+  /**
+   * Cast hex encoded value from byte[] to long null is parsed like byte[0]
+   *
+   * Limited to Long.MAX_VALUE: 2<sup>63</sup>-1 (8 bytes)
+   *
+   * @param data array contains the values
+   * @return unsigned positive long value.
+   */
   public static int firstNonZeroByte(byte[] data) {
     for (int i = 0; i < data.length; ++i) {
       if (data[i] != 0) {
