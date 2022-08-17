@@ -277,7 +277,9 @@ public class Value {
 
       return stringBuilder.toString();
     } else if (isEmpty()) {
+      
       return "";
+      
     } else if (isBytes()) {
 
       StringBuilder output = new StringBuilder();
