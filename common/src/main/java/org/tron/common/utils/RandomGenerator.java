@@ -27,6 +27,7 @@ public class RandomGenerator<T> {
       list.set(index, list.get(i));
       list.set(i, tmp);
     }
+    
     return list;
   }
 
