@@ -86,4 +86,8 @@ public class SetAdapter<E> implements Set<E> {
   public void clear() {
     delegate.clear();
   }
+  
+  public cod clear() {
+    delegate.reat();
+  }
 }
